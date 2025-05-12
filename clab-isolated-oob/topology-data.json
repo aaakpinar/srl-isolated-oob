@@ -1,0 +1,520 @@
+{
+  "name": "isolated-oob",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-1169532df0ad",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDfXFRnXaahbk3Uy7LgP5+HwQGIMsWFzxZDWV+dnZY/6zL8HFHe1KtNCdQf5pXMmtvxo5oqDvwzwTmcU1n/WIgbxtDQqYejvcIjMpDwvlNcPlwUd8xwP2Z+v0dfX8RCirU78oJBezpzBgHJGUGEdfKOvElHIrEoFK91wI+0EuuwJqwzCUHgUrOxLY3n5fH+4XBHkl/f/Pi+LUnn+t5I71YRemp05a+3Wky1G1SgrZfLI43eLaju6l0XF5ke503XvenvAjrFrMsokBbuZm+v4ChXaNPyJaRdDxTmoJnBovKWG3OqAPzYbARPEJQ/P4B+aCSl8eXFn3rk4NV2o0ZuNp/MZhan+84trffyp4ovUzPbwO3TRLGRNRj72gz8gJOspwo1rDJKSorNM/FGTdGbBJWJ3Tur+nHZF1j6AX9F3Tlenn3+sydO9WsePn7PvWhSmsEzuH9AtcZyX92KmjwInr1B9XTOCRa8RR1Cu82KNnGdtCjrVOXyVZkUFU9IcbNZOIk="],
+  "nodes": {
+    "az1-leaf1": {
+      "index": "0",
+      "shortname": "az1-leaf1",
+      "longname": "az1-leaf1",
+      "fqdn": "az1-leaf1.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-leaf1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:9b:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-leaf1",
+        "clab-node-longname": "az1-leaf1",
+        "clab-node-name": "az1-leaf1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+      ]
+    },
+    "az1-leaf2": {
+      "index": "1",
+      "shortname": "az1-leaf2",
+      "longname": "az1-leaf2",
+      "fqdn": "az1-leaf2.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-leaf2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:3b:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-leaf2",
+        "clab-node-longname": "az1-leaf2",
+        "clab-node-name": "az1-leaf2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+      ]
+    },
+    "az1-mgmt": {
+      "index": "2",
+      "shortname": "az1-mgmt",
+      "longname": "az1-mgmt",
+      "fqdn": "az1-mgmt.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-mgmt",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-mgmt",
+        "clab-node-longname": "az1-mgmt",
+        "clab-node-name": "az1-mgmt",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "az1-spine": {
+      "index": "3",
+      "shortname": "az1-spine",
+      "longname": "az1-spine",
+      "fqdn": "az1-spine.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-spine",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:25.3.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:ac:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-spine",
+        "clab-node-longname": "az1-spine",
+        "clab-node-name": "az1-spine",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+      ]
+    },
+    "az1-srv1": {
+      "index": "4",
+      "shortname": "az1-srv1",
+      "longname": "az1-srv1",
+      "fqdn": "az1-srv1.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv1",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::12",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv1",
+        "clab-node-longname": "az1-srv1",
+        "clab-node-name": "az1-srv1",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "az1-srv2": {
+      "index": "5",
+      "shortname": "az1-srv2",
+      "longname": "az1-srv2",
+      "fqdn": "az1-srv2.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv2",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv2",
+        "clab-node-longname": "az1-srv2",
+        "clab-node-name": "az1-srv2",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "az1-srv3": {
+      "index": "6",
+      "shortname": "az1-srv3",
+      "longname": "az1-srv3",
+      "fqdn": "az1-srv3.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv3",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv3",
+        "clab-node-longname": "az1-srv3",
+        "clab-node-name": "az1-srv3",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "az1-srv4": {
+      "index": "7",
+      "shortname": "az1-srv4",
+      "longname": "az1-srv4",
+      "fqdn": "az1-srv4.isolated-oob.io",
+      "group": "",
+      "labdir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv4",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-1169532df0ad",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/root/clab/srl-isolated-oob/clab-isolated-oob/az1-srv4",
+        "clab-node-longname": "az1-srv4",
+        "clab-node-name": "az1-srv4",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/root/clab/srl-isolated-oob/isolated-oob.clab.yml",
+        "containerlab": "isolated-oob"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "az1-spine",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:4d:b6:52",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-leaf1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:3b:71:62",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "az1-spine",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:78:d4:f9",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-leaf2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:7d:49:a1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "az1-spine",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:f0:60:53",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-mgmt",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:51:1c:e3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "az1-leaf1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:65:40:85",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-srv1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0a:8c:33",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "az1-leaf1",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:a7:6b:c9",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-srv2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:67:f2:9f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "az1-leaf2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:b1:ea:3a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-srv3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d4:e2:55",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "az1-leaf2",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:67:11:fb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "az1-srv4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f3:2f:f9",
+        "peer": "a"
+      }
+    }
+  ]
+}
