@@ -2,7 +2,7 @@
 
 ## Overview
 
-This lab demonstrates a secure out-of-band (OOB) management network architecture using Nokia SR Linux 7215 IXS A1 switches. The design implements multiple layers of security to isolate BMC/management traffic while allowing access to a management server.
+This lab demonstrates a secure out-of-band (OOB) management network architecture using Nokia SR Linux 7215 IXS-A1 switches. The design implements multiple layers of security to isolate BMC/management traffic while allowing access to a management server.
 
 ## Architecture
 
