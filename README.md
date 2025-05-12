@@ -1,4 +1,4 @@
-![svgviewer-output](https://github.com/user-attachments/assets/0c85a825-d089-490d-bb42-aa3c50067e9d)# Isolated OOB Management Network Lab
+# Isolated OOB Management Network Lab
 
 ## Overview
 
