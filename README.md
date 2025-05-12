@@ -6,7 +6,7 @@ This lab demonstrates a secure out-of-band (OOB) management network architecture
 
 ## Architecture
 
-![svgviewer-png-output](https://github.com/user-attachments/assets/52a18156-70f6-4481-9daa-d360382aa460)
+<img src="https://github.com/aaakpinar/srl-isolated-oob/blob/main/topology.png?raw=true" width="100%" />
 
 ## Network Design Overview
 
