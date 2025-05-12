@@ -1,4 +1,4 @@
-# Isolated OOB Management Network Lab
+![svgviewer-output](https://github.com/user-attachments/assets/0c85a825-d089-490d-bb42-aa3c50067e9d)# Isolated OOB Management Network Lab
 
 ## Overview
 
@@ -6,30 +6,7 @@ This lab demonstrates a secure out-of-band (OOB) management network architecture
 
 ## Architecture
 
-```
-                              Management Server
-                              az1-mgmt
-                              10.1.0.2/30 (eth1)
-                                    |
-                                    |
-                              10.1.0.1/30 (e1-3)
-                               SPINE (az1-spine)
-                             RouterID: 10.0.0.1
-                          10.0.1.0/31 (e1-1) | (e1-2) 10.0.2.0/31
-                          /                             \
-                         /                               \
-                10.0.1.1/31 (e1-1)                 10.0.2.1/31 (e1-1)
-                 LEAF1 (az1-leaf1)                  LEAF2 (az1-leaf2)
-              RouterID: 10.0.0.2                  RouterID: 10.0.0.3
-              IRB: 10.1.1.1/24                    IRB: 10.1.2.1/24
-                    |                                   |
-         +----------+----------+             +----------+----------+
-         |                     |             |                     |
-     (e1-2)                (e1-3)       (e1-2)                (e1-3)
-    az1-srv1              az1-srv2      az1-srv3             az1-srv4
-  10.1.1.11/24           10.1.1.12/24  10.1.2.11/24        10.1.2.12/24
-   (eth1)                 (eth1)        (eth1)               (eth1)
-```
+![svgviewer-png-output](https://github.com/user-attachments/assets/52a18156-70f6-4481-9daa-d360382aa460)
 
 ## Network Design Overview
 
@@ -67,6 +44,30 @@ Applied on leaf switches' IRB interfaces:
 - Purpose: Prevent inter-server communication at Layer 2
 
 ## Low-level Topology Details
+```
+                              Management Server
+                              az1-mgmt
+                              10.1.0.2/30 (eth1)
+                                    |
+                                    |
+                              10.1.0.1/30 (e1-3)
+                               SPINE (az1-spine)
+                             RouterID: 10.0.0.1
+                          10.0.1.0/31 (e1-1) | (e1-2) 10.0.2.0/31
+                          /                             \
+                         /                               \
+                10.0.1.1/31 (e1-1)                 10.0.2.1/31 (e1-1)
+                 LEAF1 (az1-leaf1)                  LEAF2 (az1-leaf2)
+              RouterID: 10.0.0.2                  RouterID: 10.0.0.3
+              IRB: 10.1.1.1/24                    IRB: 10.1.2.1/24
+                    |                                   |
+         +----------+----------+             +----------+----------+
+         |                     |             |                     |
+     (e1-2)                (e1-3)       (e1-2)                (e1-3)
+    az1-srv1              az1-srv2      az1-srv3             az1-srv4
+  10.1.1.11/24           10.1.1.12/24  10.1.2.11/24        10.1.2.12/24
+   (eth1)                 (eth1)        (eth1)               (eth1)
+```
 
 
 ## Deployment Steps
