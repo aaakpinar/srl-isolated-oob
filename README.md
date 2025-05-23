@@ -23,7 +23,7 @@ This lab demonstrates a secure out-of-band (OOB) management network architecture
 ## Configuration Components
 
 ### Network Instances
-- **oob-vrf**: IP routing for management network (OSPF)
+- **default(oob-vrf)**: IP routing domain (GRT) for management network
 - **bmc-net**: A local MAC-VRF for BMC interface access 
 
 ### OSPF Configuration
@@ -36,6 +36,7 @@ This lab demonstrates a secure out-of-band (OOB) management network architecture
 ### ACL Rules
 Applied on leaf switches' IRB interfaces:
 - Allow all traffic to management server
+- Allow ICMP through network
 - Deny all other traffic by default
 
 ### Split-Horizon Groups
@@ -104,7 +105,10 @@ Applied on leaf switches' IRB interfaces:
 ping 10.1.1.12  # Should fail (via SHG)
 
 # From srv1, try to reach srv3 (different leaf)
-ping 10.1.2.11  # Should fail (via ACLs)
+ping 10.1.2.11  # Should work (via ACLs)
+ssh 10.1.2.11  # Should fail (via ACLs)
+ssh 10.1.0.2 # Should work (mgmt server)
+
 ```
 
 ## Operational Commands

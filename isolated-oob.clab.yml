@@ -10,13 +10,16 @@ topology:
     ### OOB NETWORK ###
     # Spine
     az1-spine:
+      type: ixrd2l
       startup-config: configs/az1-spine.cfg
     
     # Leaves
     az1-leaf1:
+      type: ixsa1
       startup-config: configs/az1-leaf1.cfg
     
     az1-leaf2:
+      type: ixsa1
       startup-config: configs/az1-leaf2.cfg
     
     ### MANAGEMENT SERVER ###
@@ -27,6 +30,7 @@ topology:
         - ip addr add 10.1.0.2/30 dev eth1
         - ip route add 10.1.1.0/24 via 10.1.0.1
         - ip route add 10.1.2.0/24 via 10.1.0.1
+        - ip route add 10.0.0.0/29 via 10.1.0.1
     
     ### BMC SERVERS ###
     # Connected to Leaf1
@@ -36,6 +40,7 @@ topology:
       exec:
         - ip addr add 10.1.1.11/24 dev eth1
         - ip route add 10.1.0.0/16 via 10.1.1.1
+        - ip route add 10.0.0.0/29 via 10.1.1.1
     
     az1-srv2:
       kind: linux
@@ -43,6 +48,7 @@ topology:
       exec:
         - ip addr add 10.1.1.12/24 dev eth1
         - ip route add 10.1.0.0/16 via 10.1.1.1
+        - ip route add 10.0.0.0/29 via 10.1.1.1
     
     # Connected to Leaf2
     az1-srv3:
@@ -51,6 +57,7 @@ topology:
       exec:
         - ip addr add 10.1.2.11/24 dev eth1
         - ip route add 10.1.0.0/16 via 10.1.2.1
+        - ip route add 10.0.0.0/29 via 10.1.2.1
     
     az1-srv4:
       kind: linux
@@ -58,6 +65,7 @@ topology:
       exec:
         - ip addr add 10.1.2.12/24 dev eth1
         - ip route add 10.1.0.0/16 via 10.1.2.1
+        - ip route add 10.0.0.0/29 via 10.1.2.1
   
   links:
     # Spine to Leaves (L3 OSPF)
